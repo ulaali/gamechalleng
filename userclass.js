@@ -25,19 +25,25 @@ class User{
     
 }
 
-
+class Challnge{
+    constructor(id,level){
+        this.id=id,
+        this.level=level;
+    }
+    pointes(){
+        return obj={
+            id:this.id,
+            level:this.level
+        }
+    }
+}
 let user1=new User("jad",0,[]);
 console.log(user1);
-user1.newSolvedChalleng({
-    id:1,
-    level:"VE"
-})
-
-let o={
-    id:2,
-    level:"ME"
-}
-
-user1.newSolvedChalleng(o);
+let challenge=new Challnge(1,"VE")
+user1.newSolvedChalleng(challenge);
+let challenge2=new Challnge(2,"ME")
+user1.newSolvedChalleng(challenge2);
+let challenge3=new Challnge(3,"EA")
+user1.newSolvedChalleng(challenge3);
 console.log(user1.xp);
 console.log(user1.log);
